@@ -33,13 +33,16 @@ nav ul li a {
 }
 
 .project {
-    display: inline-block;
-    width: 300px;
-    margin: 20px;
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project img {
@@ -67,4 +70,30 @@ nav ul li a {
     border: none;
     border-radius: 10px;
     margin-top: 10px;
+}
+
+/* WebGL 게임의 크기 조정 */
+#gameContainer iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 60vh;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* 버튼 디자인 추가 */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
 }

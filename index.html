@@ -28,8 +28,19 @@
             <div class="project">
                 <h3>My WebGL Game</h3>
                 <p>Play my latest WebGL game directly on this page!</p>
-                <iframe src="https://rekoJay.github.io/my-webgl-game/" width="800" height="600"></iframe>
+                <button onclick="loadGame()">Play Game</button>
+                <div id="gameContainer"></div>
             </div>
+            
+            <script>
+                function loadGame() {
+                    var container = document.getElementById("gameContainer");
+                    if (!container.innerHTML) {
+                        container.innerHTML = '<iframe src="https://rekoJay.github.io/my-webgl-game/" width="800" height="600"></iframe>';
+                    }
+                }
+            </script>
+            
         
             <div class="project">
                 <img src="images/app1-thumbnail.png" alt="App 1">
