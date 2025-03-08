@@ -9,45 +9,61 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 15px 0;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
 #portfolio {
-    text-align: center;
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .project {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
-    padding: 20px;
+    justify-content: space-between;
+    text-align: left;
+    width: 90%;
     max-width: 800px;
-    margin: 0 auto;
+    padding: 20px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project img {
-    width: 100%;
-    border-radius: 10px;
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
 }
 
 .project h3 {
@@ -72,28 +88,39 @@ nav ul li a {
     margin-top: 10px;
 }
 
-/* WebGL 게임의 크기 조정 */
-#gameContainer iframe {
+#gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
     width: 100%;
-    max-width: 800px;
-    height: 60vh;
+}
+
+#gameContainer iframe {
+    width: 90%;
+    max-width: 900px;
+    height: 600px;
     border: none;
     border-radius: 10px;
-    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* 버튼 디자인 추가 */
-button {
-    background-color: #007BFF;
+
+button, .project a {
+    display: inline-block;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
 
-button:hover {
-    background-color: #0056b3;
+button:hover, .project a:hover {
+    background: linear-gradient(135deg, #0056b3, #004080);
+    transform: translateY(-2px);
 }
