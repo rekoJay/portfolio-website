@@ -20,24 +20,37 @@
 
     <main>
         <section>
-            <h2>Hello! I'm [Your Name].</h2>
-            <p>Welcome to my portfolio website, where I showcase the games and apps I have created.</p>
+            <h2>Hello! I'm Jewoo.</h2>
+            <p>Welcome to my portfolio website.</p>
         </section>
         <section id="portfolio">
             <h2>My Work</h2>
             <div class="project">
-                <img src="images/game1-thumbnail.png" alt="Game 1">
-                <h3>Game 1</h3>
-                <p>This game is an educational game that teaches proper waste sorting.</p>
-                <a href="game1/index.html" target="_blank">Play Game</a>
+                <img src="images/trashhunter.png" alt="Trash Hunter Game Thumbnail" style="width: 120px; height: auto;">
+                <div>
+                    <h3>My WebGL Game</h3>
+                    <p>Play my latest WebGL game directly on this page!</p>
+                    <button id="playGameBtn" onclick="openGame()">Play Game</button>
+                </div>
             </div>
-        
+            
             <div class="project">
-                <img src="images/app1-thumbnail.png" alt="App 1">
-                <h3>App 1</h3>
-                <p>This app provides a check-in system using QR codes.</p>
-                <a href="https://play.google.com/store/apps/details?id=yourapp" target="_blank">Download App</a>
-            </div>
+                <img src="images/2048.png" alt="2048 Game Thumbnail" style="width: 120px; height: auto;">
+                <div>
+                    <h3>2048 Puzzle Game</h3>
+                    <p>A JavaScript-based responsive 2048 game.</p>
+                    <a href="https://rekojay.github.io/2048-game/" target="_blank">Play Game</a>
+                </div>
+            </div>            
+            
+            <script>
+                function loadGame() {
+                    var container = document.getElementById("gameContainer");
+                    if (!container.innerHTML) {
+                        container.innerHTML = '<iframe src="https://rekoJay.github.io/my-webgl-game/" width="800" height="600"></iframe>';
+                    }
+                }
+            </script>
         </section>        
     </main>
 
