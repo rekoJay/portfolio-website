@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>My Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My Work</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -21,20 +23,33 @@
     <main>
         <section>
             <h2>Hello! I'm Jewoo.</h2>
-            <p>Welcome to my portfolio website.</p>
+            <section id="about" data-aos="fade-up">
+                <h2>About Me</h2>
+                <div class="about-container">
+                  <img src="images/profile.jpg" alt="My Photo" class="profile-pic">
+                  <div class="about-text">
+                    <p>Hi! I'm Jewoo, a passionate web and game developer based in Australia.</p>
+                    <ul>
+                      <li>🎓 Master of Information Systems, Curtin University</li>
+                      <li>💻 Skills: HTML, CSS, JavaScript, React, Firebase, Unity</li>
+                      <li>🎮 Interests: Game development, Data visualization, Portfolio building</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>              
         </section>
-        <section id="portfolio">
+        <section id="portfolio" data-aos="zoom-in">
             <h2>My Work</h2>
-            <div class="project">
+            <div class="project" data-aos="fade-up" data-aos-delay="0">
                 <img src="images/trashhunter.png" alt="Trash Hunter Game Thumbnail" style="width: 120px; height: auto;">
                 <div>
                     <h3>My WebGL Game</h3>
                     <p>Play my latest WebGL game directly on this page!</p>
-                    <button id="playGameBtn" onclick="openGame()">Play Game</button>
+                    <button id="playGameBtn" onclick="window.open('https://rekoJay.github.io/my-webgl-game/', '_blank')">Play Game</button>
                 </div>
             </div>
             
-            <div class="project">
+            <div class="project" data-aos="fade-up" data-aos-delay="100">
                 <img src="images/2048.png" alt="2048 Game Thumbnail" style="width: 120px; height: auto;">
                 <div>
                     <h3>2048 Puzzle Game</h3>
@@ -42,22 +57,20 @@
                     <a href="https://rekojay.github.io/2048-game/" target="_blank">Play Game</a>
                 </div>
             </div>            
-            
-            <script>
-                function loadGame() {
-                    var container = document.getElementById("gameContainer");
-                    if (!container.innerHTML) {
-                        container.innerHTML = '<iframe src="https://rekoJay.github.io/my-webgl-game/" width="800" height="600"></iframe>';
-                    }
-                }
-            </script>
         </section>        
     </main>
-
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>You can reach me at: <a href="mailto:beliner1818@gmail.com">beliner1818@gmail.com</a></p>
+    </section>
     <footer>
         <p>© 2025 My Portfolio</p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>
 </html>
