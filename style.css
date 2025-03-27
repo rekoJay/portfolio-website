@@ -48,29 +48,31 @@ html {
   
   /* 포트폴리오 그리드 레이아웃 */
   #portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
   }
   
+  
   /* 프로젝트 카드 */
   .project {
-    background: #ffffff;
-    color: #222222;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 460px; /* ✅ 카드 높이 고정 */
+    background-color: white;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    height: 100%;
-    transition: transform 0.3s ease;
   }
+  
   
   .project:hover {
     transform: translateY(-4px);
@@ -78,13 +80,13 @@ html {
   
   .project img {
     width: 100%;
-    height: 180px;
-    max-width: 100%;
-    object-fit: cover;
+    height: 180px; /* ✅ 이미지 고정 높이 */
+    object-fit: cover; /* ✅ 이미지 중앙 자르기 */
     border-radius: 8px;
     margin-bottom: 16px;
     display: block;
   }
+  
   .project h3 {
     font-size: 20px;
     margin: 0 0 10px;
@@ -208,4 +210,18 @@ html {
       height: 140px;
     }
   }
+  
+  #projects {
+    display: flex;
+    flex-wrap: wrap; /* ✅ 이 줄이 핵심 */
+    gap: 20px;
+    justify-content: center;
+  }
+
+  #portfolio > h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
   
